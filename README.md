@@ -1,32 +1,47 @@
-# Developer Technical Exercise
+# Emissions Dashboard App
 
-The purpose of this exercise is to assess candidates on equal parts data handling, visualisation, and knowledge of appropriate tooling.
+The Emissions Dashboard app is a React-based web application for visualizing emissions data. It allows you to view emissions data on either a weekly or monthly basis, with or without interpolation of missing data.
 
-## Brief
-Our client, "Logo Text Here" has supplied cumulative weekly carbon emissions data in csv format (anon_carbon_data.csv). The data is missing some weeks. We want to display the weekly emissions back to them in a graph that is easy to interpret and interrogate.
+## Installation
 
-### Requirements
-1. Transform the data so that it shows weekly carbon emissions, not cumulative.
-1. Display the data on a graph with the x axis being months and the y axis being carbon emitted that month in tCO2e (a standard unit).
-1. The user will want to "drill down" into the data, by being able to change the x axis into weeks.
-1. The user will want to be able to initially view the data "as is", with gaps, i.e. no estimation technique applied to fill the gaps where there is data missing.
-1. The user will want to be able to optionally view the data with estimated data where the gaps are, using a line of best fit (using the data before and after gaps to create estimated values).
-1. The user will want to be able to optionally view the data with estimated data where the gaps are, using pro rata (using the whole data set to create a weekly average value).
-1. Consider animations, tooltips and any other "nice to have" functionality, leaning on your data visualisation library of choice.
- 
-### Considerations
-- Weekly data can be considered missing if the data point doesn't exist, or if the value is 0.0
-- Data transformation should be done programmatically, leaving the raw csv file untouched, therefore no excel or similar tools are to be used.
-- Any reasonable programming language may be used. Use something comfortable, but capable.
-- Once the program has run, the csv file should remain unchanged, and no new csv file created.
-- The quality of the visualisation should be such that you would feel comfortable presenting it to a paid client.
-- The type and style of the graph should be such that it conveys meaning to the client.
-- It is desired that the client eventually access the data through the web, meaning that it must be displayed in the browser.
-- The client would like their logo displayed in the top centre, with appropriate padding.
-- While the browser aspect is important, please do not create a full user experience, with authentications etc. Just a graph (and associated features/functionality) and logo on a page is sufficient.
-- The client will be viewing on a desktop. No need to make it responsive.
-- Please prepare a short walkthrough of your code, demonstrating your thought process, tools used, any challenges, and any other relevant information. This should be no more than 5 minutes. No slide deck required.
-- Please do not spend more than two hours completing this task. It is not our intention that candidates lose valuable free time completing this exercise. If in doubt, call a halt to the work and present what you have.
-- Should you have any questions regarding this brief then email owain at energise dot com
+Before installing the app, please ensure you have [Node.js](https://nodejs.org/) installed on your system.
 
-### Best of luck!
+1. Clone the repository to your local machine:
+
+   ```bash
+   git clone https://github.com/RomanBromidge/CarbonDataVisualisation.git
+   ```
+
+2. Navigate into the project directory:
+
+   ```bash
+   cd emissions-dashboard
+   ```
+
+3. Install the required dependencies:
+
+   ```bash
+   npm install
+   ```
+
+## Running the App
+
+To start the application, use the command:
+
+```bash
+npm run dev
+```
+
+The app will then be served at `http://localhost:3000`.
+
+## Using the App
+
+Once the app is running, you will see a graph showing the emissions data over a certain period. You can interact with the data visualization using the provided buttons:
+
+1. **View Type**: Use the buttons "View by Weeks" and "View by Months" to switch between displaying weekly and monthly data.
+
+2. **Interpolation**: Use the buttons "No Interpolation", "Best Fit Interpolation", and "Pro Rata Interpolation" to decide whether to fill missing data points and which method to use for data interpolation.
+
+The graph will automatically update based on your selections. The y-axis represents the amount of emissions (tCO2e), while the x-axis represents the period (either weeks or months, depending on the chosen view type).
+
+Enjoy exploring the emissions data!
