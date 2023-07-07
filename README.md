@@ -15,7 +15,7 @@ Before installing the app, please ensure you have [Node.js](https://nodejs.org/)
 2. Navigate into the project directory:
 
    ```bash
-   cd emissions-dashboard
+   cd CarbonDataVisualisation
    ```
 
 3. Install the required dependencies:
